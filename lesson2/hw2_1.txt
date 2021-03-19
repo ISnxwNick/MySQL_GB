@@ -1,0 +1,8 @@
+'''
+1. Установите СУБД MySQL. Создайте в домашней директории файл .my.cnf, задав в нем логин и пароль, который указывался при установке.
+'''
+nikita@nikita-Nitro-AN515-55:~$ cat > .my.cnf
+[client]
+user=root
+password=kosmos
+nikita@nikita-Nitro-AN515-55:~$ chmod 0600 ~/.my.cnf
