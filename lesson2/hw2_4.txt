@@ -1,0 +1,5 @@
+'''
+4. (по желанию) Ознакомьтесь более подробно с документацией утилиты mysqldump. Создайте дамп единственной таблицы help_keyword базы данных mysql. Причем добейтесь того, чтобы дамп содержал только первые 100 строк таблицы.
+'''
+nikita@nikita-Nitro-AN515-55:~/MySQL_projects/GB_lesson2$ mysqldump --where="1 limit 100" mysql help_keyword > hw2-4_dump.sql
+

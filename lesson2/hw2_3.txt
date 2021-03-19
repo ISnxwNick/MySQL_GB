@@ -1,0 +1,34 @@
+'''
+3. Создайте дамп базы данных example из предыдущего задания, разверните содержимое дампа в новую базу данных sample.
+'''
+mysql> CREATE DATABASE sample;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> exit
+Bye
+nikita@nikita-Nitro-AN515-55:~/MySQL_projects/GB_lesson2$ mysqldump example > example.sql #создаем дамп
+nikita@nikita-Nitro-AN515-55:~/MySQL_projects/GB_lesson2$ mysql sample < example.sql #Заполняем БД sample из файла дампа
+#Проверка:
+mysql> USE sample
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+1 row in set (0.01 sec)
+
+mysql> DESCRIBE users;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id    | int      | YES  |     | NULL    |       |
+| name  | char(15) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+
